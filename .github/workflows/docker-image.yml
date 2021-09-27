@@ -14,7 +14,7 @@ jobs:
       - name: Checkout Dockerfile
         uses: actions/checkout@v2
       - name: Build and Push Docker Iamge
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           registry: ${{ secrets.ALI_DOCKER_HUB_REGISTRY }}
           username: ${{ secrets.ALI_DOCKER_HUB_USN }}
