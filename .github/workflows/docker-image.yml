@@ -34,3 +34,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: atline/trial
+          readme-filepath: ./docker/README.md
