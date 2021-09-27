@@ -27,3 +27,10 @@ jobs:
           context: docker
           push: true
           tags: atline/trial:latest
+      -
+        name: Update repo description
+        uses: peter-evans/dockerhub-description@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: atline/trial
