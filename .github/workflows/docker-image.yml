@@ -24,7 +24,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v1
         with:
-          context: docker
+          #context: docker
           push: true
           #tags: atline/trial:latest
       -
