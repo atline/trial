@@ -35,3 +35,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           docker info
+          
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.13.1'
+      - run: npm -v
+      - run: node -v
