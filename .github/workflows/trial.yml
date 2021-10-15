@@ -20,6 +20,8 @@ jobs:
       uses: docker/setup-buildx-action@v1.6.0
       with:
         install: true
+    - name: trial
+      run: wget http://localhost/ -O -
     - name: building image
       env:
         DB: localhost
