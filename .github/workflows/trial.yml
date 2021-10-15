@@ -24,4 +24,4 @@ jobs:
       env:
         DB: localhost
       run: |
-        docker build --network=host --build-arg DB=$DB -t backend:test .
+        docker build --network=host --build-arg DB=localhost -t backend:test .
