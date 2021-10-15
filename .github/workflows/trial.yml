@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     services:
       web:
-        image: python:3.7
+        image: nginx
         ports:
-          - 8080:8080
+          - 80:80
     steps:
     - uses: actions/checkout@v2
     - name: Docker Setup Buildx
@@ -24,4 +24,4 @@ jobs:
       env:
         DB: localhost
       run: |
-        docker build --net=host --build-arg DB=$DB -t .
+        docker build --network=host --build-arg DB=$DB -t .
