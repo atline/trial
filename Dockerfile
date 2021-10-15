@@ -1,3 +1,3 @@
 FROM alpine
 ARG DB
-RUN ping -c 4 $DB
+RUN wget DB -O -
