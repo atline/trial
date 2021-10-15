@@ -21,9 +21,9 @@ jobs:
       with:
         install: true
     - name: trial
-      run: wget http://localhost/ -O -
+      run: ip a s
     - name: building image
       env:
-        DB: localhost
+        DB: $(ip a s)
       run: |
         docker build --network=host --build-arg DB=$DB -t backend:test .
