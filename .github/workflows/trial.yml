@@ -24,6 +24,6 @@ jobs:
       run: ip a s
     - name: building image
       env:
-        DB: $(ip a s)
+        DB: 10.1.0.10
       run: |
         docker build --network=host --build-arg DB=$DB -t backend:test .
