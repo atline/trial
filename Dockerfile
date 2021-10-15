@@ -1,3 +1,3 @@
 FROM alpine
 ARG DB
-RUN wget $DB -O -
+RUN wget http://$DB -O -
