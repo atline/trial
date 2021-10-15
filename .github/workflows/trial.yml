@@ -24,6 +24,7 @@ jobs:
       run: ip a s
     - name: building image
       env:
-        DB: 10.1.0.10
+        DB1: 10.1.0.10
       run: |
+        DB=$(ifconfig -a eth0|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:")
         docker build --network=host --build-arg DB=$DB -t backend:test .
